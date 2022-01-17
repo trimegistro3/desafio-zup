@@ -39,3 +39,17 @@ button {
     left: 50%;
     transform: translate(-50%);
 }
+
+#detalhes-container>li {
+    align-items: baseline;
+    display: flex;
+}
+
+#detalhes-container>li p {
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
