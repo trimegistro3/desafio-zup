@@ -24,3 +24,20 @@ traduzirCondicao = (data) => {
 gerarValorAleatorio = () => {
     return Math.floor(Math.random() * 671);
 };
+
+pegarPersonagem = async() => {
+        let numeroAleatorio = [];
+        for (let i = 0; i <= 2; i++) {
+            numeroAleatorio.push(gerarValorAleatorio());
+        }
+        const response = await fetch(
+            `https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
+                method: "GET",
+                headers: {
+                    Accept: "application/json",
+                    "Content-type": "application/json",
+                },
+            }
+        );
+
+        botao.onclick = pegarPersonagem;
