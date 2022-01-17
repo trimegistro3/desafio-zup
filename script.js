@@ -20,3 +20,7 @@ traduzirCondicao = (data) => {
         return "Não. Está morto";
     }
 };
+
+gerarValorAleatorio = () => {
+    return Math.floor(Math.random() * 671);
+};
