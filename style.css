@@ -4,3 +4,21 @@ body {
     min-height: 100vh;
     width: 100%;
 }
+
+main {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+}
+
+main section {
+    padding: 30px;
+}
+
+main>section img {
+    height: 300px;
+    margin: 15px 0;
+    width: 300px;
+}
