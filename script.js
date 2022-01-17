@@ -10,3 +10,13 @@ const imagem3 = document.querySelector("#imagem3");
 const nomeDoPersonagem3 = document.querySelector("#nome3");
 const especie3 = document.querySelector("#especie3");
 const condicao3 = document.querySelector("#status3");
+const botao = document.querySelector("button");
+traduzirCondicao = (data) => {
+    if (data.status == "unknown") {
+        return "Não sabemos";
+    } else if (data.status == "Alive") {
+        return "Sim";
+    } else {
+        return "Não. Está morto";
+    }
+};
