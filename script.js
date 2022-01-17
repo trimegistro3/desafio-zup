@@ -26,18 +26,34 @@ gerarValorAleatorio = () => {
 };
 
 pegarPersonagem = async() => {
-        let numeroAleatorio = [];
-        for (let i = 0; i <= 2; i++) {
-            numeroAleatorio.push(gerarValorAleatorio());
+    let numeroAleatorio = [];
+    for (let i = 0; i <= 2; i++) {
+        numeroAleatorio.push(gerarValorAleatorio());
+    }
+    const response = await fetch(
+        `https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
+            method: "GET",
+            headers: {
+                Accept: "application/json",
+                "Content-type": "application/json",
+            },
         }
-        const response = await fetch(
-            `https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
-                method: "GET",
-                headers: {
-                    Accept: "application/json",
-                    "Content-type": "application/json",
-                },
-            }
-        );
-
-        botao.onclick = pegarPersonagem;
+    );
+    const data = await response.json();
+    imagem.src = data[0].image;
+    imagem.alt = data[0].name;
+    nomeDoPersonagem.innerHTML = data[0].name;
+    especie.innerHTML = data[0].species;
+    condicao.innerHTML = traduzirCondicao(data[0]);
+    imagem2.src = data[1].image;
+    imagem2.alt = data[1].name;
+    nomeDoPersonagem2.innerHTML = data[1].name;
+    especie2.innerHTML = data[1].species;
+    condicao2.innerHTML = traduzirCondicao(data[1]);
+    imagem3.src = data[2].image;
+    imagem3.alt = data[2].name;
+    nomeDoPersonagem3.innerHTML = data[2].name;
+    especie3.innerHTML = data[2].species;
+    condicao3.innerHTML = traduzirCondicao(data[2]);
+};
+botao.onclick = pegarPersonagem;
