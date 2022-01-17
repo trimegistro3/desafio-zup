@@ -1,8 +1,9 @@
 !
-<h1 align="center"> DESAFIO   ZUP </h1>
+<h1 align="center"> DESAFIO ZUP (ORGANIZAÇÃO... POR FAVOR VEJA VIDEO FINAL DA DESCRIÇÃO DO PROJETO) </h1>
 
 ## DESCRIÇÃO DO PROJETO: 
 Usando como base o código feito durante o Minicurso, seu desafio é criar uma tela que exiba aleatoriamente 3 (três) personagens do desenho Rick and Morty.
+https://youtu.be/g3SfVOSO1v8
 
 
 ## STATUS DO PROJETO:
